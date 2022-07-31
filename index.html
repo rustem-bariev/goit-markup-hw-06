@@ -61,7 +61,7 @@
       <section class="hero">
         <div class="hero-container container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-button" data-modal-open>Заказать услугу</button> 
+          <button type="button" class="hero-button btn-style" data-modal-open>Заказать услугу</button> 
       </div>
       </section>
 
@@ -410,19 +410,91 @@
              </li>
             </ul>
           </div>
+          <div class="footer-form-container">
+            <form name="footer_form" novalidate>
+              <label class="footer-label">
+                <span class="footer-text">Подпишитесь на рассылку</span>
+                <input class="footer-input" 
+                type="email" 
+                name="email"
+                placeholder="E-mail" />
+              </label>
+              </form>
+              <button class="footer-btn btn-style" type="submit">
+                <span>Подписаться</span>
+                <svg class="footer-btn-icon" width="24" height="24">
+                  <use href="./images/svg/icon/icons.svg#send"></use>
+                  </svg>
+              </button>
+          </div>
       </div>
     </footer>
     
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p>Все буде Україна)))</p>
         <button class="modal-btn" data-modal-close>
           <svg class="modal-btn-icon" width="18" height="18">
             <use href="./images/svg/icon/icons.svg#close"></use>
           </svg>
         </button>
-      </div>
+        <form class="modal-form">
+        <strong class="modal-title">Оставьте свои данные, мы вам перезвоним</strong>
+        <div class="modal-form-group " role="group">
+          
+          <label class="modal-label">
+            <span class="modal-type">Имя</span>
+            <span class="modal-effect">
+            <svg class="modal-form-icon" width="18" height="18">
+              <use href="./images/svg/icon/icons.svg#person"></use>
+            </svg> 
+            <input class="modal-input modal-effect" 
+            type="text" 
+            name="username" autofocus/>
+          </span>
+          </label>
+          <label class="modal-label">
+            <span class="modal-type">Телефон</span> 
+            <span class="modal-effect">
+              <svg class="modal-form-icon" width="18" height="18">
+                  <use href="./images/svg/icon/icons.svg#phone"></use>
+                </svg>  
+              <input class="modal-input modal-effect" 
+                type="tel" 
+                name="phone_number"/>
+              </span>  
+          </label>
+          <label class="modal-label">
+            <span class="modal-type">Почта</span>
+            <span class="modal-effect">  
+              <svg class="modal-form-icon" width="18" height="18">
+                  <use href="./images/svg/icon/icons.svg#email-black"></use>
+              </svg>
+              <input class="modal-input modal-effect" 
+              type="email" 
+              name="email"/>
+            </span>  
+          </label>
+          <label class="modal-label">
+            <span class="modal-type">Комментарий</span> 
+            <textarea class="modal-message" name="textarea" placeholder="Введите текст">
+            </textarea>
+          </label>
+        </div>
+          <label class="modal-wrap">
+             <input class="modal-check-box visually-hidden" type="checkbox" name="agreement"/>
+             <svg class="check-box-icon" width="16" height="15">
+              <use class="icon-uncheck" href="./images/svg/icon/icons.svg#check-box"></use>
+              <use class="icon-check" href="./images/svg/icon/icons.svg#check-box-ok"></use>
+            </svg>
+            <span class="check-box-text">Соглашаюсь с рассылкой и принимаю <a class="check-box-link" href="">Условия договора</a></span>
+          </label>
+          <button class="check-box-btn btn-style" type="submit">Отправить
+          </button>
+          
+        </form>
+        </div>
+        
     </div>
     <script src="./js/modal.js"></script>
   </body>

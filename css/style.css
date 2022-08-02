@@ -8,6 +8,7 @@
   --color-footer-icon:rgba(255, 255, 255, 0.1);
   --color-footer-form:rgba(255, 255, 255, 0.3);
   --footer-form-filter:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  --color-modal-massage:rgba(117, 117, 117, 0.5);
   --color-bg-footer:rgba(47, 48, 58, 0.4);
   --color-grey-bgn: #2f303a;
   --color-grey-button: #f5f4fa;
@@ -89,7 +90,7 @@
 }
 .btn-style:hover,
 .btn-style:focus{
-  transform: scaleX(0.9);
+  transform: scaleX(1.1);
 }
 /* -- reset -- */
 h1,
@@ -570,7 +571,7 @@ margin-bottom: 10px;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  transition: var(--main-anim);
+  transition: fill var(--main-anim);
 }
 .modal-input,
 .modal-message{
@@ -584,7 +585,7 @@ margin-bottom: 10px;
 }
 
 .modal-input{
-  transition: border-color var(--main-anim), fill var(--main-anim);
+  transition: border-color var(--main-anim);
   padding: 11px;
   padding-left: 40px;
   height: 40px;
@@ -612,6 +613,15 @@ margin-bottom: 10px;
   height: 120px;
   resize: none;
   transition: border-color var(--main-anim);
+
+}
+.modal-message::placeholder{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  color: var(--color-modal-massage);
 }
 .modal-wrap{
   display: inline-flex;
@@ -640,6 +650,9 @@ margin-bottom: 10px;
 .icon-check{
   opacity: 0;
   transition: opacity var(--main-anim);
+}
+.icon-uncheck{
+  transition: fill var(--main-anim);
 }
 .check-box-text{
   user-select: none;
